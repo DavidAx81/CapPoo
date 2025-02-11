@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Productos_1 = require("./Productos");
+var dulces_1 = require("./dulces");
+var hojas_1 = require("./hojas");
+var Plumas_1 = require("./Plumas");
+var dulceUno = new dulces_1.Dulces("Paleta", "Paletin");
+var hojaUno = new hojas_1.Hojas("Blanca", 5, 10);
+var pluma = new Plumas_1.Plumas("Bic", "Fina", "Rojo");
+var producto = new Productos_1.Productos();
+producto.agregarProducto(1, 5, dulceUno);
+//console.log(producto.obtenerProductos())
+producto.agregarProducto(2, 2, hojaUno);
+producto.agregarProducto(3, 10, pluma);
+console.log(producto.obtenerProductos());
+producto.eliminarProducto(3);
+console.log("----------------------------");
+console.log("----------------------------");
+console.log("----------------------------");
+console.log(producto.obtenerProductos());
